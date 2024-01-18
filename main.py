@@ -23,12 +23,12 @@ def next_card():
     canvas.itemconfig(canvas_title, text="French")
     canvas.itemconfig(canvas_word, text=flashcard.card["French"])
     flashcard.add_to_learnt()
+    window.after(LOOP_DELAY, flip_card)
 
 def flip_card():
     canvas.itemconfig(canvas_image, image=flashcard_back_image)
     canvas.itemconfig(canvas_title, text="English")
     canvas.itemconfig(canvas_word, text=flashcard.card["English"])
-    window.after(3000, flip_card)
 
 #Creating the window
 window = Tk()

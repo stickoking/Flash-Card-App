@@ -1,5 +1,5 @@
 from pandas import read_csv, DataFrame
-from random import randint, shuffle, choice
+from random import choice
 
 CSV_FILE = 'data/french_words.csv'
 TO_LEARN = 'data/to_learn.csv'
